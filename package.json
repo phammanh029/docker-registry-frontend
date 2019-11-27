@@ -43,6 +43,7 @@
   },
   "scripts": {
     "server": "grunt serve",
+    "build": "grunt uglify",
     "postinstall": "bower install",
     "pretest": "npm install",
     "test": "karma start test/karma.conf.js",
