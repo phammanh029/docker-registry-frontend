@@ -1,4 +1,4 @@
-FROM node:11-alpine as builder
+FROM node:10.16.0 as builder
 WORKDIR /source
 ADD . .
 RUN yarn install
