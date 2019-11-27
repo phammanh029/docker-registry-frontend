@@ -1,9 +1,9 @@
 FROM node:10.16.0 as builder
 WORKDIR /source
 ADD . .
-RUN yarn install
+RUN npm install
 RUN node_modules/bower/bin/bower install --allow-root
-RUN grunt build --allow-root
+RUN node_modules/grunt-cli/bin/grunt build --allow-root
 
 FROM nginx:1.17.5-alpine
 WORKDIR /usr/share/nginx/html
